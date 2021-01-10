@@ -47,8 +47,6 @@ class Net(nn.Module):
         self.conv4 = nn.Conv2d(128, 256, 3)
         
         # 64 outputs * the 53*53 filtered/pooled map size
-#         self.fc1 = nn.Linear(64*54*54, 50)
-#         self.fc1 = nn.Linear(128*26*26, 50)
         self.fc1 = nn.Linear(256*12*12, 1000)
         
         # dropout with p=0.4
